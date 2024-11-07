@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Makanan</title>
+    <link rel="stylesheet" href="do.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>Pemesanan Makanan</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <form action="#" method="POST" id="order-form">
+            <div class="form-group">
+                <label for="name">Nama Lengkap:</label>
+                <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+            </div>
+
+            <div class="form-group">
+                <label for="food">Pilih Makanan:</label>
+                <select id="food" name="food" required>
+                    <option value="nasi_goreng">Nasi Goreng - Rp 25.000</option>
+                    <option value="mie_goreng">Mie Goreng - Rp 20.000</option>
+                    <option value="sate">Sate Ayam - Rp 30.000</option>
+                    <option value="burger">Burger - Rp 35.000</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Jumlah:</label>
+                <input type="number" id="quantity" name="quantity" required min="1" value="1">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Alamat Pengiriman:</label>
+                <textarea id="address" name="address" required placeholder="Masukkan alamat lengkap"></textarea>
+            </div>
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+
+        <div id="order-summary" class="hidden">
+            <h2>Ringkasan Pesanan</h2>
+            <p id="order-name"></p>
+            <p id="order-food"></p>
+            <p id="order-quantity"></p>
+            <p id="order-address"></p>
+            <p id="order-total"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Pemesanan Makanan. Semua Hak Dilindungi.</p>
+            <ul>
+                <li><a href="#">Kebijakan Privasi</a></li>
+                <li><a href="#">Syarat dan Ketentuan</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div id="thank-you-message" class="hidden">
+        <h2>Terima Kasih!</h2>
+        <p>Pesanan Anda telah berhasil diproses. Kami akan segera mengirimkan pesanan Anda.</p>
+    </div>
+    
+    
+    <script src="do.js"></script>
+
+    
+    
+</body>
+</html>
